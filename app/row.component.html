@@ -1,0 +1,13 @@
+<tr>
+  <td><input type="text" name="date" class="form-control" [(ngModel)]="row.date"/></td>
+  <td><input type="number" name="start_time" class="form-control" [(ngModel)]="row.start_time" /></td>
+  <td><input type="number" name="finish_time" class="form-control" [(ngModel)]="row.finish_time" /></td>
+  <td width="150px">
+    <select name="users" class="form-control" [(ngModel)]="row.installer">
+      <option value="0" selected>Alex</option>
+      <option value="0">John</option>
+    </select>
+  </td>
+  <td><input type="number" name="duration" class="form-control" (change)="onLastInputChange()" [(ngModel)]="row.duration"/></td>
+  <button class="btn btn-xs btn-fill btn-danger" (click)="onRemoveRow(row)">X</button>
+</tr>
